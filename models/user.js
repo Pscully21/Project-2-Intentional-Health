@@ -2,7 +2,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection.js');
 
-// Adds a class model for Workout
+// Adds a class model for User
 class User extends Model {}
 
 // Initializes the table how each column will function
@@ -25,15 +25,12 @@ User.init(
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        date_joined: {
-            type: DataTypes.STRING,
-            allowNull: false,
         }
     },
     {
         sequelize,
-        timestamps: false,
+        timestamps: true,
+        createdAt: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'user',
