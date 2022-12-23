@@ -2,7 +2,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Adds a class model for Workout
+// Adds a class model for Workout category
 class Workout_category extends Model {}
 
 // Initializes the table how each column will function
