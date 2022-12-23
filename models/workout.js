@@ -27,7 +27,7 @@ Workout.init(
             allowNull:false,
         },
         body: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull:false,
         },
         workout_category_id: {
