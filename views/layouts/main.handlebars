@@ -5,27 +5,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intentional Health</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
   <header>
     <h1>Intentional Health</h1>
+    {{#if logged_in}}|
+    <button>Logout</button>
+    {{else}}
+    <a href="/login">login</a>
+    {{/if}}
   </header>
   <nav>
-    <a href="/">Home</a>
-    <a href="/">Profile</a>
-    <a href="/">Workouts</a>
-    <a href="/">Goals</a>
-    <a href="/">Calendar</a>
+    <a href="/home">Home</a>
+    <a href="/profile">Profile</a>
+    <a href="/workouts">Workouts</a>
+    <a href="/goals">Goals</a>
+    <a href="/calendar">Calendar</a>
   </nav>
   <main>
-    <div>
-        <p></p>
-    </div>
     <div>
       {{{body}}}
     </div>
   </main>
+  <div>
+    {{#if logged_in}}
+    <script src="/public/js/logout.js"></script>
+    {{/if}}
+  </div>
 </body>
 
 </html>
