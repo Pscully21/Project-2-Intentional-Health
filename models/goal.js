@@ -67,4 +67,4 @@ Goal.init(
       }
 )
 
-module.exports = {Goal}
+module.exports = Goal;
