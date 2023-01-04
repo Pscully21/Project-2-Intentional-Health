@@ -27,4 +27,4 @@ Workout_category.init(
         modelName: 'workout_category',
       }
 )
-module.exports = {Workout_category}
+module.exports = Workout_category;
