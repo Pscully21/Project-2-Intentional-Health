@@ -19,6 +19,13 @@
   "homepage": "https://github.com/Pscully21/Project-2-Intentional-Health#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "express-session": "^1.17.3"
+    "express-session": "^1.17.3",
+    "scrypt": "^6.0.3",
+    "handlebars":"^4.7.7",
+    "sequelize": "^6.28.0",
+    "mysql2": "^2.3.3",
+    "bulma": "^0.9.4",
+    "bulma-calendar": "^6.1.18",
+    "dotenv": "^16.0.3"
   }
 }
