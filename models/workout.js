@@ -55,3 +55,5 @@ Workout.init(
         modelName: 'workout',
       }
 )
+
+module.exports = {Workout}
