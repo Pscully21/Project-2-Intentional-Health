@@ -28,4 +28,4 @@ Goal_topic.init(
       }
 )
 
-module.exports= {Goal_topic}
+module.exports= Goal_topic;

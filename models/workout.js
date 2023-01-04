@@ -56,4 +56,4 @@ Workout.init(
       }
 )
 
-module.exports = {Workout}
+module.exports = Workout;
