@@ -1,9 +1,9 @@
 // Require dependencies
-const {User} = require('./user');
-const {Workout} = require('./workout');
+const User = require('./user');
+const Workout = require('./workout');
 const Goal = require('./goal');
-const {Workout_category} = require('./workout_category');
-const {Goal_topic} = require('./goal_topic');
+const Workout_category = require('./workout_category');
+const Goal_topic = require('./goal_topic');
 
 // User has many goals
 User.hasMany(Goal, {
