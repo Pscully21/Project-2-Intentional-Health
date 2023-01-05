@@ -1,13 +1,23 @@
 const router = require('express').Router();
-const  Goal = require('../../models');
+const Goal = require('../../models');
 //const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/goalAll', async (req, res) => {
   try {
        const newGoal = await Goal.findAll({
-          
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
        });
+       const goals = goalData.map((goal) => goal.get({ plain: true }));
 
+       res.render('homepage', {
+         goals,
+         logged_in: req.session.logged_in
+       });
        res.status(200).json(newGoal);
   } catch (err) {
       res.status(400).json(err);
@@ -41,7 +51,7 @@ router.delete('/:id', async (req, res)=> {
             return;
         }
 
-        res.status(200).json(projectData);
+        res.status(200).json(goalData);
     } catch (err) {
         res.status(500).json(err);
     }
