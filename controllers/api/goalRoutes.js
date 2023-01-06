@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Goal } = require('../../models');
 //const authCheck = require('../../utils/auth');
 
-router.post('/post', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
          const goalData = await Goal.create({
              ...req.body,

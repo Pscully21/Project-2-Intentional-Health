@@ -63,6 +63,30 @@ router.get('/goals', async (req, res) => {
   }
 });
 
+router.get('/goals', async (req, res) => {
+  try {
+    const goalData = await Goal.findByPk({
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
+    });
+    
+    const goals = goalData.map((goal) => goal.get({ plain: true }));
+
+    res.render('goals', {
+      goals,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+
 router.get('/workouts', async (req, res) => {
   try {
       const workoutData = await Workout.findAll({
@@ -76,6 +100,7 @@ router.get('/workouts', async (req, res) => {
     
       const workouts = workoutData.map((goal) => goal.get({ plain: true }));
     res.render('workouts', {
+      workouts,
       logged_in: req.session.logged_in
     });
   } catch (err) {
