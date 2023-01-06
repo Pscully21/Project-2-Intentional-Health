@@ -1,36 +1,27 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-	<meta charset = "UTF-8">
-	<title> Login Form </title>
-	<style>
-		#link {
-			font-size: 25px;
-		}
-	</style>
-</head>
-<body align ='center'>
-        <header>
-		<h1>Login</h1>
-	</header>
-
-	<form action="/login" method="POST">
-		<fieldset>
-				
-			<label>Email</label>
-			<input type ="email" id = 'email' name="email" placeholder="hotgmail@example.com" required>
-			<br><br>
-
-			<label>Password</label>
-			<input type="password" id = "password" name="password" required>
-			<br><br>
-
-			<button type ="reset">Reset</button>
-			<button type ="submit">Submit</button>
-		</fieldset>
+<li><button id="signup-btn" class="signup-btn">SignUp</button></li>
+<div id="signup" class="signup">
+    <div class="modal-content3"> 
+        <form action="" name="signupform" method="post" onsubmit="validateSignupForm()">
+            <span id="close1">&times;</span><br>
+            <input type="text" placeholder="Email" name="email" title="Enter a vaild Email Address" required pattern="\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})"><br>
+            <input type="text" placeholder="Username" name="username1" required><br>
+            <input type="password" placeholder="Password" name="password1" title="[Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters]" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+            <input type="password" placeholder="Confirm Password" name="cpassword" required><br>
+            <button type="submit">Sign Up</button>
+            <label class="checkbox"><input type="checkbox" checked="checked" name="remember1">Remember me</label><br>
         </form>
-        <br><br>
-        <a id= href="./register.html">Register</a>
-
-</body>
-</html>
+    </div>
+</div>
+<li><button id="login-btn" class="login-btn">Login</button></li>
+<div id="login" class="login">
+    <div class="modal-content2">
+        <form action="" name="loginform" method="post" onsubmit="validateLoginForm()">
+            <span id="close">&times;</span><br>
+            <input type="text" placeholder="Username" name="username" required><br>
+            <input type="password" placeholder="Password" name="password" title="[Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters]" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+            <button type="submit">Login</button>
+            <label class="checkbox"><input type="checkbox" checked="checked" name="remember">Remember me</label><br>
+            <a href="#" class="fgtpass">Forgot Password</a>
+        </form>
+    </div>
+</div>
