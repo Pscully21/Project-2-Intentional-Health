@@ -1,34 +1,66 @@
-<h2>Login</h2>
+<header class="container">
+  <h2 class="notification is-size-2 has-text-centered container-is-fluid">Login</h2>
+  <article class="message is-link has-text-centered container-is-fluid">
+    <div class="message-header">
+      <p>Login</p>
+      <button class="delete" aria-label="delete"></button>
+    </div>
+    <div class="message-body">
+      If you already have an account please sign in using your email and password
+    </div>
+  </article>
+</header>
+<section class="container mx-auto my-3">
+  <form class="box">
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input" type="email" placeholder="e.g. test@example.com">
+      </div>
+    </div>
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input class="input" type="password" placeholder="********">
+    </div>
+  </div>
 
-<form>
-  <div>
-    <label>Email:</label>
-    <input/>
-  </div>
-  <div>
-    <label>Password:</label>
-    <input/>
-  </div>
-  <div>
-    <button>Login</button>
-  </div>
+  <button class="button is-primary">Sign-in</button>
 </form>
-<form>
-  <div>
-    <label>Email:</label>
-    <input/>
+
+<section class="container">
+  <h2 class="notification is-size-2 has-text-centered container-is-fluid">Sign-up</h2>
+    <article class="message is-link has-text-centered container-is-fluid">
+      <div class="message-header">
+        <p>Sign-up</p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+    <div class="message-body">
+      If you have not created an account yet please enter your email and password below to become part of our amazing community!
+    </div>
+  </article>
+</section>
+  <form class="box">
+    <div class="field">
+      <label class="label">Email</label>
+      <div class="control">
+        <input class="input" type="email" placeholder="e.g. test@example.com">
+      </div>
+    </div>
+
+  <div class="field">
+    <label class="label">Password</label>
+    <div class="control">
+      <input class="input" type="password" placeholder="********">
+    </div>
   </div>
-  <div>
-    <label>Password:</label>
-    <input/>
-  </div>
-  <div>
-    <label>Confirm Password:</label>
-    <input/>
-  </div>
-  <div>
-    <button>Register</button>
-  </div>
-</form>
+
+  <label class="checkbox">
+    <input type="checkbox">
+  I agree to the <a href="#">terms and conditions</a>
+  </label>
+    <button class="button is-primary">Sign up</button>
+  </form>
+</section>
 
 <script src="/public/js/login.js"></script>
