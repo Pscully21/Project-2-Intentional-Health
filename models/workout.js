@@ -38,14 +38,6 @@ Workout.init(
                 key: 'id'
             }
         },
-        unit: {
-            type: DataTypes.STRING,
-            allowNull:false,
-        },
-        public_status: {
-            type: DataTypes.BOOLEAN,
-            allowNull:false
-        }
     },
     {
         sequelize,
