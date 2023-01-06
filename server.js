@@ -11,7 +11,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-//const hbs = handlebars.create({ helpers });
+const hbs = handlebars.create({});
 //sets up session
  const sess = {
      secret: 'Super secret secret',
@@ -30,7 +30,7 @@ const PORT = process.env.PORT || 3001;
 
   app.use(session(sess));
 
-  app.engine('handlebars', handlebars.engine);
+  app.engine('handlebars', hbs.engine);
 
   app.set('view engine', 'handlebars');
 
