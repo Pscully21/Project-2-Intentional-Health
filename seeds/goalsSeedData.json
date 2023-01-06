@@ -1,0 +1,27 @@
+[
+  {
+    
+    "title": "weight loss",
+    "body": "find routine to lose 50lbs ",
+    "end_date": "1/31/2023",
+    "reflection": "lorem ipsum...",
+    "public status": true,
+    "done_status": false
+  },
+  {
+    "title": "upper body strength",
+    "body": "exercise upper body",
+    "end_date": "3/10/2023",
+    "reflection": "lorem ipsum...",
+    "public status": false,
+    "done_status": false
+  },
+  {
+    "title": "prioritize abdominal",
+    "body": "do abdominal workouts/ reduce belly",
+    "end_date": "6/22/2023",
+    "reflection": "lorem ipsum...",
+    "public status": false,
+    "done_status": false
+  }
+]
