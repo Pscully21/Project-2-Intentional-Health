@@ -1,9 +1,17 @@
 [
   {
     "username": "johnsmith432",
-    "email": "johnS432@email.com",
-    "goal": "lose 50lbs"
-    
+    "email": "johnS@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "janegarcia76",
+    "email": "jgarcia@gmail.com",
+    "password": "password12345"
+  },
+  {
+    "username": "DanJacobs290",
+    "email": "DannyboyJ@gmail.com",
+    "password": "password12345"
   }
-
 ]
