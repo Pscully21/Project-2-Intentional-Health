@@ -7,25 +7,41 @@
   <title>Intentional Health</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link href="~bulma-calendar/dist/css/bulma-calendar.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/public/css/style.css">
 </head>
 
 <body>
-  <header>
+  <nav class="navbar container is-fluid" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          </a>
+          <a class="navbar-item" href="/login">login</a>
+        </div>
+        
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a id="Homelink" class="navbar-item" href="/home">Home</a>
+            <a class="navbar-item" href="/workouts">Workouts</a>
+            <a class="navbar-item" href="/goals">Goals</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section>
+    <div class="bg-img hero is-danger section is-medium is-size-1 is-italic is-family-primary title is-2">
     <h1>Intentional Health</h1>
     {{#if logged_in}}|
     <button>Logout</button>
-    <a href="/home">login</a>
     {{else}}
-    <a href="/login">login</a>
+    <!--<a href="/login">login</a>-->
     {{/if}}
-  </header>
-  <nav>
-    <a href="/home">Home</a>
-    <a href="/profile">Profile</a>
-    <a href="/workouts">Workouts</a>
-    <a href="/goals">Goals</a>
-    <a href="/calendar">Calendar</a>
-  </nav>
+    </div>
+  </section>
   <main>
     <div>
       {{{body}}}
