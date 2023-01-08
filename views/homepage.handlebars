@@ -1,4 +1,4 @@
-<h2 class="subtitle is-3 has-text-centered container is-fluid">
+<!--<h2 class="subtitle is-3 has-text-centered container is-fluid">
     Home
 </h2>
 
@@ -8,11 +8,76 @@
     your goals. We've got the tools to help you stay on track and achieve your goals.
 </p>
 
-<div class="content">
-    <h2>My Profile</h2>
+<div class="container-is-fluid has-text-centered">
+    <h2 class="is-underlined content is-size-2 has-text-centered " >My Profile</h2>
+        <div class="columns">
+            <div class="column is-auto">
+                <p id="totalWorkouts"> Total Workouts</p>
+            </div>
+            <div class="column is-auto">
+                <p id="totalGoals"> Total Goals</p>
+            </div>
+            <div class="column is-auto">
+                <p id="goalsReached"> Goals Reached</p>
+            </div>
+            <div class="column is-auto">
+                <p id="dateJoined"> Date Joined</p>
+            </div>
+        </div>
+</div>-->
 
-    <p id="totalWorkouts"> Total Workouts</p>
-    <p id="totalGoals"> Total Goals</p>
-    <p id="dateJoined"> Date Joined</p>
-</div>
-
+<body class="mx-3">
+    <h2 class="subtitle is-3 has-text-centered container is-fluid">
+        Home
+    </h2>
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+            <div class="tile">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child notification is-primary">
+                        <p class="title has-text-centered" id="totalWorkouts">Total Workouts</p>
+                        <p class="subtitle has-text-centered">Your workouts will appear here</p>
+                        <p id="totalWorkouts"></p>
+                    </article>
+                    <article class="tile is-child notification is-warning">
+                        <p class="title has-text-centered">Goals reached</p>
+                        <p class="subtitle has-text-centered">Your reached goals</p>
+                        <p id="goalsReached"></p>
+                    </article>
+                </div>
+                <div class="tile is-parent">
+                    <article class="tile is-child notification is-info">
+                        <p class="title has-text-centered">Total goals</p>
+                        <p class="subtitle pt-3 has-text-centered"> Your goals will appear here</p>
+                        <p id="totalGoals"></p>
+                        <figure class="image is-4by3">
+                            <img src="https://media.istockphoto.com/id/1206845008/vector/gym-icons-fitness-and-gym-line-icon-set-vector-illustration-editable-stroke.jpg?s=612x612&w=0&k=20&c=jCUk_dN4icwuAi4tJO7CLq3K9kv1HCj6Y8JtldH0660=">
+                        </figure>
+                    </article>
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                    <p class="title has-text-centered">Date Joined</p>
+                    <p class="subtitle">You joined ....</p>
+                    <div class="content">
+                        <p id="dateJoined"></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="tile is-parent">
+                    <article class="tile is-child notification is-info">
+                        <p class="title has-text-centered">Welcome to Intentional Health</p>
+                        <p class="subtitle pt-3 has-text-justified"> Are you able to keep track of   your workout regimen and keep up with workout
+                            plans all in your head? Could you use
+                            help tracking your fitness goals? With Intentional Health you can save your workouts,
+                            schedule them, and map out
+                            your goals. We've got the tools to help you stay on track and achieve your goals.</p>
+                        <figure class="image is-4by3">
+                            <img src="https://previews.123rf.com/images/alekseyvanin/alekseyvanin2001/alekseyvanin200101470/139016628-seamless-workout-sport-pattern-fitness-and-gym-icons-pattern-background-vector-graphics.jpg">
+                        </figure>
+                    </article>
+        </div>
+    </div>
+</body>
