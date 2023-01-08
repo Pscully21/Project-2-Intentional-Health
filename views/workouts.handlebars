@@ -1,9 +1,11 @@
+workouts 
+
 <section>
     <h2>My Workouts</h2>
     <p>Your workouts will show up here</p>
-    <button>Create New Workout</button>
+    <button id="create-button">Create New Workout</button>
 </section>
-<div class="modal">
+<div class="modal" id="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head">
@@ -13,14 +15,14 @@
             <div class="field">
                 <label class="label">Title:</label>
                 <div class="control">
-                    <input class="input" type="text" placeholder="Type here">
+                    <input id="title-id" class="input" type="text" placeholder="Type here">
                 </div>
             </div>
             <div class="field">
                 <label class="label">Category:</label>
                 <div class="control">
                     <div class="select">
-                        <select>
+                        <select id="category">
                             <option>Please select</option>
                             <option>Cardio</option>
                             <option>Stamina</option>
@@ -36,13 +38,13 @@
             <div class="field">
                 <label class="label">Description:</label>
                 <div class="control">
-                    <input class="input" type="Type here" placeholder="">
+                    <input id="description-id" class="input" type="Type here" placeholder="">
                 </div>
             </div>
         </section>
         <footer class="modal-card-foot">
-            <button class="button is-success">Save Workout</button>
-            <button class="button">Cancel</button>
+            <button class="button is-success" id="save-button">Save Workout</button>
+            <button class="button is-danger" id="cancel-button">Cancel</button>
         </footer>
     </div>
 </div>
@@ -51,3 +53,4 @@
     {{/each}}
 </section>
 
+<script src="/public/js/newWorkout.js"></script>
