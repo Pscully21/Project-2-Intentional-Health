@@ -3,19 +3,16 @@
     
     "title": "running",
     "body": "run 1 mile each day",
-    "workout_category": "Cardio",
-    "public status": true
+    "workout_category": "Cardio"
   },
   {
     "title": "Bench press",
     "body": "3 sets of 10 reps",
-    "workout_category": "Strength",
-    "public status": false
+    "workout_category": "Strength"
   },
   {
     "title": "prioritize abdominal",
     "body": "do abdominal workouts/ reduce belly",
-    "workout_category": "Stamina",
-    "public status": false
+    "workout_category": "Stamina"
   }
 ]
