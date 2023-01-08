@@ -1,10 +1,10 @@
 const signupFormHandler = async (event) => {
     event.preventDefault();
   
-    const email = document.querySelector('#email-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
+    const email = document.querySelector('#signupemail').value.trim();
+    const password = document.querySelector('#signuppassword').value.trim();
   
-    if (email && password && confirmPass && password === confirmPass) {
+    if (email && password) {
       const response = await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
@@ -12,9 +12,9 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/');
       } else {
-        console.log('Error logging in!');
+        alert('Error logging in!');
       }
     }
   };

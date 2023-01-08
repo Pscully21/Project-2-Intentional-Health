@@ -11,21 +11,21 @@
   </article>
 </header>
 <section class="container mx-auto my-3">
-  <form class="box">
+  <form class="box login-form">
     <div class="field">
       <label class="label">Email</label>
       <div class="control">
-        <input class="input" type="email" placeholder="e.g. test@example.com">
+        <input class="input" type="email" placeholder="e.g. test@example.com" id="loginemail">
       </div>
     </div>
   <div class="field">
     <label class="label">Password</label>
     <div class="control">
-      <input class="input" type="password" placeholder="********">
+      <input class="input" type="password" placeholder="********" id="loginpassword">
     </div>
   </div>
 
-  <button class="button is-primary">Sign-in</button>
+  <button class="button is-primary" type="submit">Sign-in</button>
 </form>
 
 <section class="container">
@@ -40,18 +40,18 @@
     </div>
   </article>
 </section>
-  <form class="box">
+  <form class="box signup-form">
     <div class="field">
       <label class="label">Email</label>
       <div class="control">
-        <input class="input" type="email" placeholder="e.g. test@example.com">
+        <input class="input" type="email" placeholder="e.g. test@example.com" id="signupemail">
       </div>
     </div>
 
   <div class="field">
     <label class="label">Password</label>
     <div class="control">
-      <input class="input" type="password" placeholder="********">
+      <input class="input" type="password" placeholder="********" id="signuppassword">
     </div>
   </div>
 
@@ -59,7 +59,7 @@
     <input type="checkbox">
   I agree to the <a href="#">terms and conditions</a>
   </label>
-    <button class="button is-primary">Sign up</button>
+    <button class="button is-primary" type="submit">Sign up</button>
   </form>
 </section>
 
