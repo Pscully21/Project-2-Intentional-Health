@@ -17,8 +17,8 @@ const signupFormHandler = async (event) => {
         console.log('Error logging in!');
       }
     }
-};
-  
+  };
+
 document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
+    .querySelector('.signup-form')
+    .addEventListener('submit', signupFormHandler);
