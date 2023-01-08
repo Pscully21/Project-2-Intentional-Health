@@ -42,18 +42,6 @@ Goal.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        reflection: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        public_status: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        },
-        done_status: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        }
 
     },
     {
