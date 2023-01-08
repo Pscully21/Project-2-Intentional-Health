@@ -32,7 +32,7 @@ const saveGoalButton = async (event) => {
 
 const cancelButton = (event) => {
     event.preventDefault();
-    document.querySelector('#cancel-button').classList.remove('is-active');
+    document.querySelector('#modal').classList.remove('is-active');
 };
 
 document
