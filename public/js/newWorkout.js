@@ -25,12 +25,11 @@ const saveWorkoutButton = async (event) => {
             alert('Something went wrong!');
         }
     }
-
 };
 
 const cancelButton = (event) => {
-    event.preventDefault();
-    document.querySelector('#cancel-button').classList.remove('is-active');
+    document.querySelector('#modal').classList.remove('is-active');
+    console.log('removed')
 };
 
 document
@@ -39,7 +38,7 @@ document
 
 document
     .querySelector('#save-button')
-    .addEventListener('click', saveGoalButton);
+    .addEventListener('click', saveWorkoutButton);
 
 document
     .querySelector('#cancel-button')
