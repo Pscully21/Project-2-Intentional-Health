@@ -37,10 +37,10 @@ const cancelButton = (event) => {
 
 document
     .querySelector('#create-button')
-    .addEventListener('click', createWorkoutButton);
+    .addEventListener('click', createGoalButton);
 
 document
-    .querySelector('#save-button')
+    .querySelector('#save-goal')
     .addEventListener('click', saveGoalButton);
 
 document
