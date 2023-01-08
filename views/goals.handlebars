@@ -1,0 +1,63 @@
+<section>
+    <h2>My Goals</h2>
+    <p>Everyone has goals and we aim to helping you achieve yours!</p>
+    <p>Click the Create New Goal button below to start tracking your progress with us!</p>
+    <button>Create New Goal</button>
+</section>
+<div class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Create New Goal</p>
+        </header>
+        <section class="modal-card-body">
+            <div class="field">
+                <label class="label">Title:</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Type here">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Start Date:</label>
+                <div class="control">
+                    <input type="date">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">End Date:</label>
+                <div class="control">
+                    <input type="date">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Topic:</label>
+                <div class="control">
+                    <div class="select">
+                        <select>
+                            <option>Please select</option>
+                            <option>Fitness</option>
+                            <option>Nutrition</option>
+                            <option>Self-Care</option>
+                            <option>Social</option>
+                            <option>Knowledge</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Description:</label>
+                <div class="control">
+                    <input class="input" type="Type here" placeholder="">
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success">Save Goal</button>
+            <button class="button">Cancel</button>
+        </footer>
+    </div>
+</div>
+<section>
+    {{#each goal-card as |goal|}}
+    {{/each}}
+</section>
