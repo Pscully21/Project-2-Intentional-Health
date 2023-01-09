@@ -1,9 +1,14 @@
-workouts 
-
-<section>
-    <h2>My Workouts</h2>
-    <p>Your workouts will show up here</p>
-    <button id="create-button">Create New Workout</button>
+<div class="container is-fullhd pt-4 ">
+    <div>
+        <h1 class="has-text-centered is-size-2">Workouts</h1>
+    </div>
+</div>
+<section class="container is-fluid pt-4">
+    <div class="notification is-info">
+        <h2 class="has-text-centered is-size-3">My Workouts</h2>
+        <p class="has-text-centered is-size-5 pt-5" >Your workouts will show up here</p>
+        <button class="button is-fullwidth button is-success is-light button is-rounded is-size-5" id="create-button">Create New Workout</button>
+    </div>
 </section>
 <div class="modal" id="modal">
     <div class="modal-background"></div>
@@ -53,4 +58,4 @@ workouts
     {{/each}}
 </section>
 
-<script src="/js/newWorkout.js"></script>
+<script src="js/newWorkout.js"></script>
