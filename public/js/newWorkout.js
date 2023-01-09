@@ -27,6 +27,18 @@ const saveWorkoutButton = async (event) => {
     }
 };
 
+// const deleteWorkoutButton = async (event) => {
+//     event.preventDefault();
+//     document.
+//     try { 
+//         fetch(`/api/workouts/${workoutID}`, {
+
+//         }) 
+//     } catch (error) {
+//         res.status(400).json(error)
+//     }
+// }
+
 const cancelButton = (event) => {
     document.querySelector('#modal').classList.remove('is-active');
 };

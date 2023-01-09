@@ -53,10 +53,27 @@
         </footer>
     </div>
 </div>
-<section>
-    {{#each user.workout as |workout|}}
-    {{> workout-card}}
+<section class="container">
+    {{#each workouts as |workout|}}
+    <section>
+    <section  style="margin-top: 20px" class="card is-one-third">
+    <header class="card-header has-background-info"><p class="card-header-title has-text-white">{{title}}</p></header>
+    <div class="card-content has-background-info-light">
+        <div class="content">
+        <p>Category: {{category}}</p>
+        <p>Description: {{body}}</p>
+        </div>
+        <footer class="card-footer">
+            <div class="columns">
+                <div class="column is-one-third">
+                    <button style="width: 200px" class="card-footer-item button is-info">Delete This Workout</button>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+</section>
     {{/each}}
 </section>
 
-<script src="js/newWorkout.js"></script>
+<script src="/js/newWorkout.js"></script>
