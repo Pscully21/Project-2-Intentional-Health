@@ -54,7 +54,8 @@
     </div>
 </div>
 <section>
-    {{#each workout-card as |workout|}}
+    {{#each user.workout as |workout|}}
+    {{> workout-card}}
     {{/each}}
 </section>
 
