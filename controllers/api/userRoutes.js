@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Goal, Workout } = require('../../models');
+const bcrypt = require('bcrypt')
 
 router.get('/', async (req, res) => {
   try {
@@ -69,7 +70,7 @@ router.post('/login', async (req, res) => {
         return;
       }
   
-      const validPassword = await userData.checkPassword(req.body.password);
+      const validPassword = await bcrypt.compare(req.body.password, userData.password);
   
       if (!validPassword) {
         res
@@ -82,11 +83,11 @@ router.post('/login', async (req, res) => {
         req.session.user_id = userData.id;
         req.session.logged_in = true;
         
-        res.json({ user: userData, message: 'You are now logged in!' });
+        res.status(200).json({ user: userData, message: 'You are now logged in!' });
       });
   
-    } catch (err) {
-      res.status(400).json(err);
+    } catch (error) {
+      res.status(400).json(error);
     }
   });
   
