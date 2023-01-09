@@ -30,14 +30,10 @@ Workout.init(
             type: DataTypes.STRING,
             allowNull:false,
         },
-        workout_category_id: {
-            type: DataTypes.INTEGER,
-            allowNull:false,
-            references: {
-                model: 'workout_category',
-                key: 'id'
-            }
-        },
+        category: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        }
     },
     {
         sequelize,

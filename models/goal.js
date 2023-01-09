@@ -30,13 +30,13 @@ Goal.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        topic_id: {
-            type: DataTypes.INTEGER,
+        topic: {
+            type: DataTypes.STRING,
             allowNull: false,
-            references: {
-                model: 'goal_topic',
-                key: 'id'
-            }
+        },
+        start_date: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         end_date: {
             type: DataTypes.STRING,
@@ -46,9 +46,7 @@ Goal.init(
     },
     {
         sequelize,
-        timestamps: true,
-        createdAt: true,
-        updatedAt: false,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'goal',
