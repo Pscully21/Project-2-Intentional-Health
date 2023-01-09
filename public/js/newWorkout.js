@@ -27,17 +27,21 @@ const saveWorkoutButton = async (event) => {
     }
 };
 
-// const deleteWorkoutButton = async (event) => {
-//     event.preventDefault();
-//     document.
-//     try { 
-//         fetch(`/api/workouts/${workoutID}`, {
-
-//         }) 
-//     } catch (error) {
-//         res.status(400).json(error)
-//     }
-// }
+const deleteWorkoutButton = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/workouts/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.reload()
+      } else {
+        alert('Failed to delete project');
+      }
+    }
+  };
 
 const cancelButton = (event) => {
     document.querySelector('#modal').classList.remove('is-active');
@@ -50,6 +54,10 @@ document
 document
     .querySelector('#save-button')
     .addEventListener('click', saveWorkoutButton);
+
+document
+    .querySelector('.card-footer')
+    .addEventListener('click', deleteWorkoutButton);
 
 document
     .querySelector('#cancel-button')
