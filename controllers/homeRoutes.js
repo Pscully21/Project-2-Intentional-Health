@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Goal, Workout } = require('../models');
-//const withAuth = require('../utils/auth');
+const authCheck = require('../utils/auth');
 
 
 
@@ -41,30 +41,24 @@ router.get('/login', async (req, res) => {
 //   }
 // });
 
-router.get('/goals', async (req, res) => {
+router.get('/goals', authCheck, async (req, res) => {
   try {
-    const goalData = await Goal.findAll({
-        include: [
-          {
-            model: User,
-            attributes: ['id'],
-          },
-        ],
-    });
+    const goalData = await Goal.findAll({ where: {user_id: req.session.user_id}});
     
     const goals = goalData.map((goal) => goal.get({ plain: true }));
-
+    
     res.render('goals', {
       goals,
       logged_in: req.session.logged_in
     });
+    console.log(goalData)
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
 
-router.get('/workouts', async (req, res) => {
+router.get('/workouts', authCheck, async (req, res) => {
   try {
       const workoutData = await Workout.findAll({
         include: [
