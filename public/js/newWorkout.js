@@ -8,12 +8,12 @@ const saveWorkoutButton = async (event) => {
 
     const title = document.querySelector('#title-id').value.trim();
     const category = document.querySelector('#category').value.trim();
-    const description = document.querySelector('#description-id').value.trim();
+    const body = document.querySelector('#description-id').value.trim();
 
-    if (title && category && description) {
+    if (title && category && body) {
         const response = await fetch('/api/workouts', {
             method: 'POST',
-            body: JSON.stringify({title, category, description}),
+            body: JSON.stringify({title, category, body}),
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -29,7 +29,6 @@ const saveWorkoutButton = async (event) => {
 
 const cancelButton = (event) => {
     document.querySelector('#modal').classList.remove('is-active');
-    console.log('removed')
 };
 
 document

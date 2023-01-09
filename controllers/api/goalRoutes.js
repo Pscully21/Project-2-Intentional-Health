@@ -36,7 +36,9 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     try {
-         const goalData = await Goal.create(req.body,);
+         const goalData = await Goal.create({
+            ...req.body,
+            user_id: req.session.user_id});
          res.status(200).json(goalData);
     } catch (err) {
         res.status(400).json(err);

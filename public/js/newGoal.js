@@ -7,15 +7,15 @@ const saveGoalButton = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector('#title-id').value.trim();
-    const startDate = document.querySelector('#start-date-id').value.trim();
-    const endDate = document.querySelector('#end-date-id').value.trim();
+    const start_date = document.querySelector('#start-date-id').value.trim();
+    const end_date = document.querySelector('#end-date-id').value.trim();
     const topic = document.querySelector('#topic').value.trim();
-    const description = document.querySelector('#description-id').value.trim();
+    const body = document.querySelector('#description-id').value.trim();
 
-    if (title && startDate && endDate && topic && description) {
+    if (title && start_date && end_date && topic && body) {
         const response = await fetch('/api/goals/', {
             method: 'POST',
-            body: JSON.stringify({title, startDate, endDate, topic, description}),
+            body: JSON.stringify({title, start_date, end_date, topic, body}),
             headers: {
                 'Content-Type': 'application/json',
             }
