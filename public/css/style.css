@@ -7,3 +7,7 @@
     background-color: #999;
 
 }
+
+.no-style {
+    all: unset
+}

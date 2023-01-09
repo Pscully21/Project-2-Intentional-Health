@@ -14,7 +14,11 @@
     <div class="container">
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="/login">login</a>
+          {{#if logged_in}}
+          <a class="navbar-item" href=""><button class="no-style" id="logout">Logout</button></a>
+          {{else}}
+          <a class="navbar-item" href="/login">Login</a>
+          {{/if}}
         </div>
         
         <div class="navbar-end">
@@ -31,11 +35,6 @@
   <section>
     <div class="bg-image section is-medium is-size-1 is-italic is-family-primary title is-2">
     <h1 class="has-text-weight-bold is-italic has-text-black has-text-centered is-size-1">Intentional Health</h1>
-    {{#if logged_in}}|
-    <button>Logout</button>
-    {{else}}
-    <!--<a href="/login">login</a>-->
-    {{/if}}
     </div>
   </section>
   <main>
