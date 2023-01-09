@@ -6,7 +6,13 @@ const authCheck = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
+
+    const totalGoals = await Goal.findAll({where: {user_id: req.session.user_id}});
+    const totalWorkouts = await Workout.findAll({where: {user_id: req.session.user_id}});
+
     res.render('homepage', {
+      totalGoals,
+      totalWorkouts,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -60,14 +66,7 @@ router.get('/goals', authCheck, async (req, res) => {
 
 router.get('/workouts', authCheck, async (req, res) => {
   try {
-      const workoutData = await Workout.findAll({
-        include: [
-          {
-            model: User,
-            attributes: ['id'],
-          },
-        ],
-      });
+      const workoutData = await Workout.findAll({ where: {user_id: req.session.user_id}});
     
       const workouts = workoutData.map((goal) => goal.get({ plain: true }));
     res.render('workouts', {

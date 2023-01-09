@@ -8,19 +8,30 @@
                 <div class="tile is-parent is-vertical">
                     <article class="tile is-child notification is-primary">
                         <p class="title has-text-centered" id="totalWorkouts">Total Workouts</p>
-                        <p class="subtitle has-text-centered">Your workouts will appear here</p>
-                        <p id="totalWorkouts"></p>
+                        {{#if logged_in}}
+                        <p class="title" id="totalWorkouts">{{totalWorkouts.length}}</p>
+                        {{else}}
+                        <p class="subtitle has-text-centered">You need to log in to see this. Your total workouts will appear here</p>
+                        {{/if}}
                     </article>
                     <article class="tile is-child notification is-warning">
                         <p class="title has-text-centered">Goals reached</p>
                         <p class="subtitle has-text-centered">Your reached goals</p>
-                        <p id="goalsReached"></p>
+                        {{#if logged_in}}
+                        <p id="goalsReached">Under developement!! Sorry!</p>
+                        {{else}}
+                        <p class="subtitle has-centered-text">You need to log in to see this. Your total reached goals will appear here</p>
+                        {{/if}}
                     </article>
                 </div>
                 <div class="tile is-parent">
                     <article class="tile is-child notification is-info">
                         <p class="title has-text-centered">Total goals</p>
+                        {{#if logged_in}}
+                        <p class="title has-centered-text">{{totalGoals.length}}</p>
+                        {{else}}
                         <p class="subtitle pt-3 has-text-centered"> Your goals will appear here</p>
+                        {{/if}}
                         <p id="totalGoals"></p>
                         <figure class="image is-4by3">
                             <img src="https://media.istockphoto.com/id/1206845008/vector/gym-icons-fitness-and-gym-line-icon-set-vector-illustration-editable-stroke.jpg?s=612x612&w=0&k=20&c=jCUk_dN4icwuAi4tJO7CLq3K9kv1HCj6Y8JtldH0660=">

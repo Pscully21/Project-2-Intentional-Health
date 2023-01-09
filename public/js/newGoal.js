@@ -30,6 +30,22 @@ const saveGoalButton = async (event) => {
 
 };
 
+const deleteWorkoutButton = async (event) => {
+    if (event.target.hasAttribute('data-id')) {
+      const id = event.target.getAttribute('data-id');
+  
+      const response = await fetch(`/api/goals/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (response.ok) {
+        document.location.reload()
+      } else {
+        alert('Failed to delete project');
+      }
+    }
+  };
+
 const cancelButton = (event) => {
     event.preventDefault();
     document.querySelector('#modal').classList.remove('is-active');
@@ -42,6 +58,10 @@ document
 document
     .querySelector('#save-goal')
     .addEventListener('click', saveGoalButton);
+
+    document
+    .querySelector('.card-footer')
+    .addEventListener('click', deleteWorkoutButton);
 
 document
     .querySelector('#cancel-button')
