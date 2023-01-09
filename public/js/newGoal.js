@@ -13,7 +13,7 @@ const saveGoalButton = async (event) => {
     const description = document.querySelector('#description-id').value.trim();
 
     if (title && startDate && endDate && topic && description) {
-        const response = await fetch('/api/goals/post', {
+        const response = await fetch('/api/goals/', {
             method: 'POST',
             body: JSON.stringify({title, startDate, endDate, topic, description}),
             headers: {
