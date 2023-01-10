@@ -55,10 +55,10 @@ document
     .querySelector('#save-button')
     .addEventListener('click', saveWorkoutButton);
 
+    document
+    .querySelector('#cancel-button')
+    .addEventListener('click', cancelButton);
+
 document
     .querySelector('.card-footer')
     .addEventListener('click', deleteWorkoutButton);
-
-document
-    .querySelector('#cancel-button')
-    .addEventListener('click', cancelButton);
