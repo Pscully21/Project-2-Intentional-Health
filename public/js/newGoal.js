@@ -59,10 +59,11 @@ document
     .querySelector('#save-goal')
     .addEventListener('click', saveGoalButton);
 
-    document
-    .querySelector('.card-footer')
-    .addEventListener('click', deleteWorkoutButton);
-
+    
 document
     .querySelector('#cancel-button')
     .addEventListener('click', cancelButton);
+
+document
+    .querySelector('.card-footer')
+    .addEventListener('click', deleteWorkoutButton);
