@@ -6,14 +6,9 @@ const authCheck = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-
-    const totalGoals = await Goal.findAll({where: {user_id: req.session.user_id}});
-    const totalWorkouts = await Workout.findAll({where: {user_id: req.session.user_id}});
-
     res.render('homepage', {
-      totalGoals,
-      totalWorkouts,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      user_id: req.session.user_id
     });
   } catch (err) {
     res.status(500).json(err);
